@@ -1,0 +1,24 @@
+@import "./styles/base.scss";
+
+.app-page {
+  .tab {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+    &-item {
+      flex: 1;
+      text-align: center;
+      & > a {
+        display: block;
+        font-size: 14px; /*no*/
+        color: rgb(77, 85, 93);
+        text-decoration: none;
+        &.active {
+          color: rgb(240, 20, 20);
+        }
+      }
+    }
+  }
+}

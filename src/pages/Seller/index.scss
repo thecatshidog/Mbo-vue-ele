@@ -1,0 +1,201 @@
+@import "../../styles/base.scss";
+.seller {
+  position: absolute;
+  top: 348px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  .overview {
+    position: relative;
+    padding: 36px;
+    .title {
+      margin-bottom: 16px;
+      line-height: 28px;
+      color: rgb(7, 17, 27);
+      font-size: 14px;
+      /*no*/
+    }
+    .desc {
+      padding-bottom: 36px;
+      @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+      font-size: 0;
+      .star {
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: top;
+      }
+      .text {
+        display: inline-block;
+        margin-right: 24px;
+        line-height: 36px;
+        vertical-align: top;
+        font-size: 10px;
+        /*no*/
+        color: rgb(77, 85, 93);
+      }
+    }
+    .remark {
+      display: flex;
+      padding-top: 36px;
+      .block {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid rgba(7, 17, 27, 0.1);
+      }
+      &:last-child {
+        border: none;
+      }
+      h2 {
+        margin-bottom: 8px;
+        line-height: 20px;
+        font-size: 10px;
+        /*no*/
+        color: rgb(147, 153, 159);
+      }
+      .content {
+        line-height: 48px;
+        font-size: 10px;
+        /*no*/
+        color: rgb(7, 17, 27);
+        .stress {
+          font-size: 24px;
+          /*no*/
+        }
+      }
+    }
+    .favorite {
+      position: absolute;
+      width: 100px;
+      right: 22px;
+      top: 36px;
+      text-align: center;
+      font-size: 0;
+      .icon-favorite {
+        display: block;
+        margin-bottom: 8px;
+        line-height: 48px;
+        font-size: 24px;
+        /*no*/
+        color: #d4d6d9;
+        &.active {
+          color: rgb(240, 20, 20);
+        }
+      }
+      .text {
+        line-height: 20px;
+        font-size: 10px;
+        /*no*/
+        color: rgb(77, 85, 93);
+      }
+    }
+  }
+  .bulletin {
+    padding: 36px 36px 0 36px;
+    .title {
+      margin-bottom: 16px;
+      line-height: 28px;
+      color: rgb(7, 17, 27);
+      font-size: 14px;
+      /*no*/
+    }
+    .content-wrapper {
+      padding: 0 24px 32px 24px;
+      @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+      .content {
+        line-height: 48px;
+        font-size: 12px;
+        /*no*/
+        color: rgb(240, 20, 20);
+      }
+    }
+    .supports {
+      .support-item {
+        padding: 32px 24px;
+        @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+        font-size: 0;
+        &:last-child {
+          @include border-none();
+        }
+      }
+      .icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        vertical-align: top;
+        margin-right: 12px;
+        background-size: 32px 32px;
+        background-repeat: no-repeat;
+        &.decrease {
+          @include bg-image('../../assets/imgs/seller/decrease_4');
+        }
+        &.discount {
+          @include bg-image('../../assets/imgs/seller/discount_4');
+        }
+        &.guarantee {
+          @include bg-image('../../assets/imgs/seller/guarantee_4');
+        }
+        &.invoice {
+          @include bg-image('../../assets/imgs/seller/invoice_4');
+        }
+        &.special {
+          @include bg-image('../../assets/imgs/seller/special_4');
+        }
+      }
+      .text {
+        line-height: 32px;
+        font-size: 12px;
+        /*no*/
+        color: rgb(7, 17, 27);
+      }
+    }
+  }
+  .pics {
+    padding: 36px;
+    .title {
+      margin-bottom: 24px;
+      line-height: 28px;
+      color: rgb(7, 17, 27);
+      font-size: 14px;
+      /*no*/
+    }
+    .pic-wrapper {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      .pic-list {
+        font-size: 0;
+      }
+      .pic-item {
+        display: inline-block;
+        margin-right: 12px;
+        width: 240px;
+        height: 180px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .info {
+    padding: 36px 36px 0 36px;
+    color: rgb(7, 17, 27);
+    .title {
+      padding-bottom: 24px;
+      line-height: 28px;
+      @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+      font-size: 14px;
+      /*no*/
+    }
+    .info-item {
+      padding: 32px 24px;
+      line-height: 32px;
+      @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+      font-size: 12px;
+      /*no*/
+      &:last-child {
+        @include border-none();
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "../../styles/base.scss";
+
+.goods {
+  display: flex;
+  position: absolute;
+  top: 348px;
+  bottom: 92px;
+  width: 100%;
+  overflow: hidden;
+  .menu-wrapper {
+    flex: 0 0 160px;
+    width: 160px;
+    background: #f3f5f7;
+    .menu-item {
+      display: table;
+      height: 108px;
+      padding: 0 24px;
+      line-height: 28px;
+      &.current {
+        position: relative;
+        z-index: 10;
+        margin-top: -2px;
+        background: #fff;
+        font-weight: 700;
+        .text {
+          @include border-none();
+        }
+      }
+      .icon {
+        display: inline-block;
+        vertical-align: top;
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        &.decrease {
+          @include bg-image('../../assets/imgs/goods/decrease_3');
+        }
+        &.discount {
+          @include bg-image('../../assets/imgs/goods/discount_3');
+        }
+        &.guarantee {
+          @include bg-image('../../assets/imgs/goods/guarantee_3');
+        }
+        &.invoice {
+          @include bg-image('../../assets/imgs/goods/invoice_3');
+        }
+        &.special {
+          @include bg-image('../../assets/imgs/goods/special_3');
+        }
+      }
+      .text {
+        display: table-cell;
+        width: 112px;
+        vertical-align: middle;
+        @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+        font-size: 12px; /*no*/
+      }
+    }
+  }
+  .foods-wrapper {
+    flex: 1;
+    .title {
+      padding-left: 28px;
+      height: 52px;
+      line-height: 52px;
+      border-left: 4px solid #d9dde1;
+      font-size: 12px; /*no*/
+      color: rgb(147, 153, 159);
+      background: #f3f5f7;
+    }
+    .food-item {
+      display: flex;
+      margin: 36px;
+      padding-bottom: 36px;
+      @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+      &:last-child {
+        @include border-none();
+        margin-bottom: 0;
+      }
+      .icon {
+        flex: 0 0 114px;
+        margin-right: 20px;
+      }
+      .content {
+        flex: 1;
+        .name {
+          margin: 4px 0 16px 0;
+          height: 28px;
+          line-height: 28px;
+          font-size: 14px; /*no*/
+          color: rgb(7, 17, 27);
+        }
+        .desc, .extra {
+          line-height: 20px;
+          font-size: 10px; /*no*/
+          color: rgb(147, 153, 159);
+        }
+        .desc {
+          line-height: 24px;
+          margin-bottom: 16px;
+        }
+        .extra {
+          .count {
+            margin-right: 24px;
+          }
+        }
+        .price {
+          font-weight: 700;
+          line-height: 48px;
+          .now {
+            margin-right: 16px;
+            font-size: 14px; /*no*/
+            color: rgb(240, 20, 20);
+          }
+          .old {
+            text-decoration: line-through;
+            font-size: 10px; /*no*/
+            color: rgb(147, 153, 159);
+          }
+        }
+        .cartcontrol-wrapper {
+          position: absolute;
+          right: 0;
+          bottom: 24px;
+        }
+      }
+    }
+  }
+}

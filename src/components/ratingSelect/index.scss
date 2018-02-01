@@ -1,0 +1,60 @@
+@import "../../styles/base.scss";
+.ratingselect {
+  .rating-type {
+    padding: 36px 0;
+    margin: 0 36px;
+    @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+    font-size: 0;
+    .block {
+      display: inline-block;
+      padding: 16px 24px;
+      margin-right: 16px;
+      line-height: 32px;
+      border-radius: 1px;
+      font-size: 12px; /*no*/
+      color: rgb(77, 85, 93);
+      &.active {
+        color: #fff;
+      }
+      .count {
+        margin-left: 4px;
+        font-size: 8px; /*no*/
+      }
+      &.positive {
+        background: rgba(0, 160, 220, 0.2);
+      }
+      &.active {
+        background: rgb(0, 160, 220);
+      }
+      &.negative {
+        background: rgba(77, 85, 93, 0.2);
+      }
+      &.active {
+        background: rgb(77, 85, 93);
+      }
+    }
+  }
+  .switch {
+    padding: 24px 36px;
+    line-height: 48px;
+    @include border-1px(rgba(7, 17, 27, 0.1), 'bottom');
+    color: rgb(147, 153, 159);
+    font-size: 0;
+    &.on {
+      .icon-check_circle {
+        color: #00c850;
+      }
+    }
+    .icon-check_circle {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 8px;
+      font-size: 24px; /*no*/
+    }
+    .text {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 12px; /*no*/
+    }
+  }
+}

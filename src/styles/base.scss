@@ -1,0 +1,46 @@
+@mixin border-1px ($borderColor, $position) {
+  position: relative;
+  border: none;
+  &::before {
+    @media only screen and (min-resolution: 1.5dppx) {
+      width: 150%;
+      transform: scale(0.7);
+    }
+    @media only screen and (min-resolution: 2dppx) {
+      width: 200%;
+      transform: scale(0.5);
+    }
+    @media only screen and (min-resolution: 3dppx) {
+      width: 300%;
+      transform: scale(0.333);
+    }
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 1px; /*no*/
+    background-color: $borderColor;
+    @if $position == 'top' {
+      transform-origin: 0 0;
+    } @else if $position == 'left' {
+      transform-origin: 0 100%;
+    } @else if $position == 'right' {
+      transform-origin: 100% 0;
+    } @else if $position == 'bottom' {
+      transform-origin: 0 0;
+      bottom: 0;
+    }
+  }
+  
+}
+
+@mixin bg-image ($url) {
+  background-image: url($url + "@2x.png");
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url($url + "@3x.png");
+  }
+}
+@mixin border-none{
+  &:after {
+    display: none;
+  }
+}
